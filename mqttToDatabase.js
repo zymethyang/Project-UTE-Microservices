@@ -25,7 +25,7 @@ client.on('message', function (topic, message) {
 
 const insertDatabase = ({ type, value }) => {
     pool.getConnection().then(conn => {
-        conn.query(`INSERT INTO ${type}(name, value, updated_time) VALUES ('${type}',${value},NOW())`)
+        conn.query(`INSERT INTO ${type}(name, value, updated_time) VALUES ('?',?,NOW())`, [type, value])
             .then((result) => {
                 conn.end();
                 console.log(result);
