@@ -2,10 +2,10 @@ const mariadb = require('mariadb');
 const mqtt = require('mqtt');
 
 const pool = mariadb.createPool({ database: 'hien_do_an', host: '18.138.252.122', user: 'hien_do_an', password: 'hien_do_an', connectionLimit: 5 });
-const client = mqtt.connect({ host: 'mqtt.solavo.net', port: 1883, username: 'sammy', password: 'Mmjlhm2tYRCRoaQ0XuFO' })
+const client = mqtt.connect({ host: 'mqtt.solavo.net', port: 1883, username: 'FWpfOR6wyKZIoYj', password: '135308641' })
 
 client.on('connect', function () {
-    client.subscribe('android_test_dev_uid', function (err) {
+    client.subscribe('FWpfOR6wyKZIoYj/fb', function (err) {
         if (!err) {
             //client.publish('android_test_dev_uid', 'Hello mqtt')
         }
