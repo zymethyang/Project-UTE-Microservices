@@ -11,6 +11,6 @@
   "dependencies": {
     "mariadb": "^2.0.5",
     "moment": "^2.24.0",
-    "mqtt": "^2.18.8"
+    "mqtt": "^4.3.7"
   }
 }
